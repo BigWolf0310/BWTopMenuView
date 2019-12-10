@@ -13,6 +13,9 @@
 		67DF56C7239E3B7C007BB4C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67DF56C6239E3B7C007BB4C6 /* Assets.xcassets */; };
 		67DF56CA239E3B7C007BB4C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67DF56C8239E3B7C007BB4C6 /* LaunchScreen.storyboard */; };
 		67DF56CD239E3B7C007BB4C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DF56CC239E3B7C007BB4C6 /* main.m */; };
+		67DF56DC239E3CBA007BB4C6 /* BWTopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DF56DB239E3CBA007BB4C6 /* BWTopMenuView.m */; };
+		67DF56DF239E439F007BB4C6 /* UIView+BWExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DF56DE239E439F007BB4C6 /* UIView+BWExtention.m */; };
+		67DF56E2239E4CFA007BB4C6 /* BWChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DF56E1239E4CFA007BB4C6 /* BWChildViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		67DF56C9239E3B7C007BB4C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67DF56CB239E3B7C007BB4C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67DF56CC239E3B7C007BB4C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		67DF56DA239E3CBA007BB4C6 /* BWTopMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWTopMenuView.h; sourceTree = "<group>"; };
+		67DF56DB239E3CBA007BB4C6 /* BWTopMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWTopMenuView.m; sourceTree = "<group>"; };
+		67DF56DD239E439F007BB4C6 /* UIView+BWExtention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+BWExtention.h"; sourceTree = "<group>"; };
+		67DF56DE239E439F007BB4C6 /* UIView+BWExtention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+BWExtention.m"; sourceTree = "<group>"; };
+		67DF56E0239E4CFA007BB4C6 /* BWChildViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWChildViewController.h; sourceTree = "<group>"; };
+		67DF56E1239E4CFA007BB4C6 /* BWChildViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWChildViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +71,25 @@
 				67DF56BE239E3B7B007BB4C6 /* AppDelegate.m */,
 				67DF56C0239E3B7B007BB4C6 /* ViewController.h */,
 				67DF56C1239E3B7B007BB4C6 /* ViewController.m */,
+				67DF56E0239E4CFA007BB4C6 /* BWChildViewController.h */,
+				67DF56E1239E4CFA007BB4C6 /* BWChildViewController.m */,
+				67DF56D3239E3B96007BB4C6 /* BWTopMenuView */,
 				67DF56C3239E3B7B007BB4C6 /* Main.storyboard */,
 				67DF56C6239E3B7C007BB4C6 /* Assets.xcassets */,
 				67DF56C8239E3B7C007BB4C6 /* LaunchScreen.storyboard */,
 				67DF56CB239E3B7C007BB4C6 /* Info.plist */,
 				67DF56CC239E3B7C007BB4C6 /* main.m */,
+			);
+			path = BWTopMenuView;
+			sourceTree = "<group>";
+		};
+		67DF56D3239E3B96007BB4C6 /* BWTopMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				67DF56DD239E439F007BB4C6 /* UIView+BWExtention.h */,
+				67DF56DE239E439F007BB4C6 /* UIView+BWExtention.m */,
+				67DF56DA239E3CBA007BB4C6 /* BWTopMenuView.h */,
+				67DF56DB239E3CBA007BB4C6 /* BWTopMenuView.m */,
 			);
 			path = BWTopMenuView;
 			sourceTree = "<group>";
@@ -97,6 +120,7 @@
 		67DF56B2239E3B7B007BB4C6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BW;
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = syt;
 				TargetAttributes = {
@@ -142,7 +166,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				67DF56C2239E3B7B007BB4C6 /* ViewController.m in Sources */,
+				67DF56DF239E439F007BB4C6 /* UIView+BWExtention.m in Sources */,
+				67DF56E2239E4CFA007BB4C6 /* BWChildViewController.m in Sources */,
 				67DF56CD239E3B7C007BB4C6 /* main.m in Sources */,
+				67DF56DC239E3CBA007BB4C6 /* BWTopMenuView.m in Sources */,
 				67DF56BF239E3B7B007BB4C6 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

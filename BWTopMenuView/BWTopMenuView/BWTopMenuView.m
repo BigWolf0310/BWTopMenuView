@@ -38,6 +38,9 @@ static CGFloat const lineH = 2.0;
         self.backgroundColor = UIColor.whiteColor;
         self.showsHorizontalScrollIndicator = NO;
         self.bounces = NO;
+        self.defaultColor = UIColor.blackColor;
+        self.selectColor = UIColor.blueColor;
+        self.lineColor = UIColor.blueColor;
     }
     return self;
 }
@@ -45,6 +48,22 @@ static CGFloat const lineH = 2.0;
 
 
 #pragma mark - setter方法
+- (void)setSelectColor:(UIColor *)selectColor
+{
+    _selectColor = selectColor;
+}
+
+- (void)setDefaultColor:(UIColor *)defaultColor
+{
+    _defaultColor = defaultColor;
+}
+
+- (void)setLineColor:(UIColor *)lineColor
+{
+    _lineColor = lineColor;
+}
+
+
 - (void)setTitleArray:(NSArray *)titleArray
 {
     _titleArray = titleArray;
@@ -56,8 +75,8 @@ static CGFloat const lineH = 2.0;
             UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
             NSString *title = [NSString stringWithFormat:@"%@", titleArray[i]];
             [button setTitle:title forState:UIControlStateNormal];
-            [button setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
-            [button setTitleColor:UIColor.redColor forState:UIControlStateSelected];
+            [button setTitleColor:self.defaultColor forState:UIControlStateNormal];
+            [button setTitleColor:self.selectColor forState:UIControlStateSelected];
             button.titleLabel.font = k_Button_Title_Font;
             button.tag = i;
             CGSize size = [self sizeWithText:title font:k_Button_Title_Font maxSize:CGSizeMake(k_Screen_Width, MAXFLOAT)];
@@ -78,7 +97,7 @@ static CGFloat const lineH = 2.0;
         
         UIButton *button = self.subviews.firstObject;
         UIView *indicatorView = [[UIView alloc] init];
-        indicatorView.backgroundColor = UIColor.redColor;
+        indicatorView.backgroundColor = self.lineColor;
         indicatorView.Bw_height = lineH;
         indicatorView.Bw_y = self.Bw_height - lineH * 2;
         indicatorView.Bw_width = button.Bw_width - 2 * btnSpace;
